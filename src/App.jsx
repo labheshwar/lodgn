@@ -1,12 +1,15 @@
 import './App.css';
 import SideBar from './components/SideBar';
-import MainBody from './components/MainBody';
+import CurrentRequests from './components/CurrentRequests';
 
 function App() {
   return (
     <div className='grid-layout'>
       <SideBar />
-      <MainBody />
+      <CurrentRequests />
+      <button className='chat-now-logo'>
+        <i className='fa-brands fa-weixin'></i>
+      </button>
     </div>
   );
 }
