@@ -1,14 +1,24 @@
 import { useState, useEffect } from 'react';
 
+/**
+ * Sidebar component
+ */
 const SideBar = () => {
   const [activeNavItem, setActiveNavItem] = useState(0); // Initialize activeNavItem state to the index of the first item
   const [showSideBar, setShowSideBar] = useState(true); // Initialize showSideBar state to true
 
+  /**
+   * Handle click event for the navigation items
+   * @param {number} index - Index of the clicked item
+   */
   const handleNavItemClick = (index) => {
     setActiveNavItem(index); // Update activeNavItem state with the index of the clicked item
   };
 
   useEffect(() => {
+    /**
+     * Handle resize event to update showSideBar state based on window width
+     */
     const handleResize = () => {
       setShowSideBar(window.innerWidth > 540); // Update showSideBar based on the window width
     };
@@ -29,7 +39,7 @@ const SideBar = () => {
         onClick={() => setShowSideBar(!showSideBar)}
       ></i>
       {showSideBar && (
-        <aside className='sidebar'>
+        <aside className={`sidebar ${showSideBar ? 'open' : ''}`}>
           <div className='nav-links'>
             <h2>Lodgn</h2>
             <ul>

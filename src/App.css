@@ -1,24 +1,30 @@
+/* Importing fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Resetting default styles */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Body styles */
 body {
   background-color: #d9d9d9;
 }
 
+/* Grid layout for the page */
 .grid-layout {
   display: grid;
   grid-template-columns: 20% 80%;
 }
 
+/* Hamburger icon styles */
 .hamburger-icon {
   display: none;
 }
 
+/* Chat Now logo styles */
 .chat-now-logo {
   position: fixed;
   bottom: 2rem;
@@ -38,6 +44,7 @@ body {
   padding: 0.5rem;
 }
 
+/* Sidebar styles */
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -46,9 +53,10 @@ body {
   background-color: #ffffff;
   box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  height: 130vh;
+  height: 40rem;
 }
 
+/* Navigation links styles */
 .nav-links {
   padding: 1rem 0;
 }
@@ -81,6 +89,7 @@ body {
   color: #72aa83;
 }
 
+/* Logout container styles */
 .logout-container {
   margin: 1rem;
 }
@@ -98,15 +107,17 @@ body {
   cursor: pointer;
 }
 
+/* Help desk container styles */
 .help-desk-container {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 1rem 0;
-  font-family: 'lato', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 500;
 }
 
+/* Current requests styles */
 .current-requests {
   padding: 2rem 3rem;
 }
@@ -118,6 +129,7 @@ body {
   font-weight: 600;
 }
 
+/* Request details container and request container styles */
 .request-details-container,
 .request-container {
   font-family: 'Lato', sans-serif;
@@ -131,10 +143,12 @@ body {
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Details section styles */
 .details {
   display: flex;
 }
 
+/* Date details styles */
 .date-details {
   display: flex;
 }
@@ -165,6 +179,7 @@ body {
   text-align: center;
 }
 
+/* Processing request button styles */
 .processing-request {
   display: flex;
   z-index: 2;
@@ -198,12 +213,14 @@ body {
   background-color: #fdf307;
 }
 
+/* Request container styles */
 .request-container {
   border-radius: 2rem;
   padding: 2rem 1rem;
-  height: 55%;
+  height: 70%;
 }
 
+/* Completed button styles */
 .completed-button {
   border-radius: 24px;
   background: #44a16f;
@@ -218,11 +235,13 @@ body {
   cursor: pointer;
 }
 
+/* Detail card container styles */
 .detail-card-container {
   display: flex;
   justify-content: space-around;
 }
 
+/* Detail card styles */
 .detail-card {
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.18);
@@ -234,6 +253,7 @@ body {
   position: relative;
 }
 
+/* Badge styles */
 .badge {
   position: absolute;
   top: -15px;
@@ -248,6 +268,7 @@ body {
   text-align: center;
 }
 
+/* Logo text styles */
 .logo-text {
   text-align: center;
   margin-top: 1rem;
@@ -259,6 +280,7 @@ body {
   color: #85c371;
 }
 
+/* Card details styles */
 .card-details {
   display: flex;
   flex-direction: column;
@@ -275,12 +297,14 @@ body {
   color: #959595;
 }
 
+/* Book now info styles */
 .book-now-info {
   display: flex;
   justify-content: space-between;
   margin-top: 0.5rem;
 }
 
+/* Book now button styles */
 .book-now-button {
   border-radius: 10px;
   background: #44a16f;
@@ -291,6 +315,7 @@ body {
   cursor: pointer;
 }
 
+/* Responsive styles */
 @media (max-width: 800px) {
   html {
     font-size: 14px;
@@ -301,6 +326,9 @@ body {
   .request-details-container,
   .request-container {
     width: auto;
+  }
+  .request-container {
+    height: 80%;
   }
   .current-requests {
     padding: 3rem 1rem;
@@ -322,14 +350,11 @@ body {
   }
 
   .sidebar {
-    height: 50vh;
+    height: 40rem;
   }
 
   .grid-layout {
     grid-template-columns: 100%;
-  }
-  .request-container {
-    height: 80%;
   }
 }
 
